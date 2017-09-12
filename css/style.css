@@ -1,0 +1,14 @@
+.jumbotron h1{
+    color: blue;    
+}
+.col-sm-2{
+    border: 1px solid red;
+    height: 50px;
+}
+.col-sm-12{
+    border: 1px solid red;
+    height: 50px;
+}
+#wrapper{
+    background-color: black;
+}
