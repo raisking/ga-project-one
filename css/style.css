@@ -14,12 +14,14 @@ h1{
     font-size: 5em;
     font-family: 'Passion One', cursive;  
     text-align: center; 
+    text-shadow: 5px 5px rgb(0, 153, 204);
 }
 .col-sm-2{
     border: 2px solid #696969;
     height: 80px;
     box-shadow: 3px 3px 5px 6px #ccc; 
     margin: 5px;
+    text-shadow: 2px 2px rgb(0, 153, 204);
 }
 
 
@@ -36,7 +38,7 @@ h1{
 
 }
 .topic {
-    background-color: 	#006600;
+    background: linear-gradient(-90deg, rgb(0, 102, 255),rgb(230, 249, 255), rgb(0, 153, 204)); /* Standard syntax */
     color: #fff;
     font-size: 2em;
     font-weight: bolder;
@@ -45,6 +47,8 @@ h1{
     border-radius: 10px;
     position: relative;
     left: 70px;
+    height: 120px;
+
 }
 .hundred-1, .hundred-2,.hundred-3,
 .hundred-4,.hundred-5, .two-hundred-1,.two-hundred-2,
@@ -68,13 +72,11 @@ h1{
 }
 
 .col-sm-2:hover{
-        background-color: rgb(0, 153, 255);
-        color: red;
+    background: linear-gradient(-90deg, rgb(0, 102, 255),rgb(0, 204, 102), rgb(0, 153, 204), rgb(230, 249, 255)); 
+    color: rgb(255,0,0);
+    
 }
-.topic{
-    height: 120px;
-    background-color: #ccf;
-}
+
 img{
     width: 90px;
     height: 100px;
@@ -108,4 +110,7 @@ img{
 }
 #playerName, #score, #dollar{
     color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px rgb(0, 153, 204);
+}
 }

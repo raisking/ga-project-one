@@ -1,24 +1,20 @@
 
 
 
-// const css = {
-//     cssQ1 = "Which of the following defines a relative measurement for the height of a font in em spaces?",
-//     //answer- em
+const css = [
+    {cssQ1: "Which of the following defines a relative measurement for the height of a font in em spaces?"},
+    {cssA1: "em"},
+    {cssQ2: "Which of the following defines 1% of viewport width? hint: 'vh'"},
+    {cssA2: "vh"},
+    {cssQ3: "Which of the following property is used to set the width of an image border? hint'border'"},
+    {cssA3: "border"},
+    {cssQ4: "Which of the following value of cursor shows it as the 'I' bar? hint'move'"},
+    {cssA4: "move"},
+    {cssQ5: "Which of the following property is used to set the text direction? hint 'directon'"},
+    {cssA4: "direction"}
+]; 
 
-// }
-// $(document).alert(function(){
-//     var player = prompt("Pleae enter your name?")
-//     if(player != null){
-//         document.getElementById("id").innerHTML = "Player:" + player;
-//     }
-// })   
 
-window.onload = function(){
-    let user = prompt("Please enter your name");
-    if(user != null){
-        document.getElementById('playerName').innerHTML = user + " Score:";
-    }   
-};
 
 // let playerScore = document.getElementById('score'); //global variable
 let playerScore = $('#score'); //global variable
@@ -28,7 +24,7 @@ playerScore = parseInt('0');
 $(document).ready(function(){
     $('.hundred-1').click(function(){
     $('.hundred-1').empty();
-        var cssQ1 = prompt("Which of the following defines a relative measurement for the height of a font in em spaces? hint 'em'");
+        var cssQ1 = prompt(`${css[cssQ1]}`);
         if(cssQ1.toLowerCase() === 'em') {
             alert("correct!!!"); 
             playerScore += 100;
@@ -39,7 +35,7 @@ $(document).ready(function(){
             }
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -55,7 +51,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -71,7 +67,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -87,7 +83,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -103,7 +99,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -120,7 +116,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -136,7 +132,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -152,7 +148,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -168,7 +164,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -184,7 +180,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -201,7 +197,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -217,7 +213,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -233,7 +229,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -249,7 +245,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -265,7 +261,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -282,7 +278,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -298,7 +294,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -314,7 +310,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -330,7 +326,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -346,13 +342,13 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
         }       
     });
 });
-//SQL
+//C#
 $(document).ready(function(){
     $('.hundred-5').click(function(){
     $('.hundred-5').empty();
@@ -363,7 +359,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -379,7 +375,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -395,7 +391,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -411,7 +407,7 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
         }       
@@ -427,9 +423,17 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
-            alert("Wrong! -100");
+            alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
         }       
     });
 });
+// window.onload = function(){
+//     let user = prompt("Please enter your name");
+//     if(user != null){
+//         document.getElementById('playerName').innerHTML = user + " Score:";
+//     } else if( user = null){
+//         alert("You forget to enter your name")
+//     }
+// };
