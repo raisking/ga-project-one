@@ -11,8 +11,14 @@
 //     if(player != null){
 //         document.getElementById("id").innerHTML = "Player:" + player;
 //     }
-// })
+// })   
 // let playScore = 0;
+window.onload = function(){
+    let user = prompt("Please enter your name");
+    if(user != null){
+        document.getElementById('playerName').innerHTML = user + " Score";
+    }   
+};
 
 // let playerScore = document.getElementById('score'); //global variable
 let playerScore = $('#score'); //global variable
@@ -22,7 +28,7 @@ playerScore = parseInt('0');
 $(document).ready(function(){
     $('.hundred-1').click(function(){
     $('.hundred-1').empty();
-        var cssQ1 = prompt("Which of the following defines a relative measurement for the height of a font in em spaces?");
+        var cssQ1 = prompt("Which of the following defines a relative measurement for the height of a font in em spaces? hint 'em'");
         if(cssQ1.toLowerCase() === 'em') {
             alert("correct!!!"); 
             playerScore += 100;
@@ -38,7 +44,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.two-hundred-1').click(function(){
     $('.two-hundred-1').empty();
-        var cssQ2 = prompt("Which of the following defines 1% of viewport width?");
+        var cssQ2 = prompt("Which of the following defines 1% of viewport width? hint: 'vh'");
         if(cssQ2.toLowerCase() === 'vh') {
             alert("correct!!!"); 
             playerScore += 200;
