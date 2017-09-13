@@ -12,7 +12,7 @@
 //         document.getElementById("id").innerHTML = "Player:" + player;
 //     }
 // })   
-// let playScore = 0;
+
 window.onload = function(){
     let user = prompt("Please enter your name");
     if(user != null){
@@ -33,6 +33,10 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
+            function play(){
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
              }
         else{
             alert("Wrong! -100");
