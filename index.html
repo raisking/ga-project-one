@@ -6,74 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Passion+One|Righteous|Russo+One" rel="stylesheet">
+    <title>Jeopardy </title>
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
-          <h1>Jeapordy</h1> 
-          <p>"Jeopardy!" is a classic game show 
-              -- with a twist. The answers are given first, and the contestants supply the questions.</p> 
-          </div>       
+        <h1>Jeopardy</h1> 
         </div>
-        <div class ="container-fluid">
+        <div class ="container-fluid" id="wrapper">
         <div class="container" id="main">
-            <div class="row">
-                <div class="col-sm-2" id="col-1">States and Capitals</div>
-                <div class="col-sm-2" id="col-2">Basic Math</div>
-                <div class="col-sm-2" id="col-3">Computer Info</div>
-                <div class="col-sm-2" id="col-4">History</div>
-                <div class="col-sm-2" id="col-5">Science</div>          
+            <div class="row" id="header">
+                <div class="col-sm-2 topic" id="css">CSS</div>
+                <div class="col-sm-2 topic" id="javascript">JavaScript</div>
+                <div class="col-sm-2 topic" id="java">Java</div>
+                <div class="col-sm-2 topic" id="php">PHP</div>
+                <div class="col-sm-2 topic" id="sqls">SQL</div>          
             </div>
-            <div class="row">
-                <div class="col-sm-2">10</div>
-                <div class="col-sm-2">10</div>
-                <div class="col-sm-2">10</div>
-                <div class="col-sm-2">10</div>
-                <div class="col-sm-2">10</div>     
+            <div class="row" id = "first-row">
+                <div class="col-sm-2 hundred-1">$100</div>
+                <div class="col-sm-2 hundred-2">$100</div>
+                <div class="col-sm-2 hundred-3">$100</div>
+                <div class="col-sm-2 hundred-4">$100</div>
+                <div class="col-sm-2 hundred-5">$100</div>     
             </div>
-            <div class="row">
-                <div class="col-sm-2">100</div>
-                <div class="col-sm-2">100</div>
-                <div class="col-sm-2">100</div>
-                <div class="col-sm-2">100</div>
-                <div class="col-sm-2">100</div>     
+            <div class="row" id="second-row">
+                <div class="col-sm-2 two-hundred-1">$200</div>
+                <div class="col-sm-2 two-hundred-2">$200</div>
+                <div class="col-sm-2 two-hundred-3">$200</div>
+                <div class="col-sm-2 two-hundred-4">$200</div>
+                <div class="col-sm-2 two-hundred-5">$200</div>     
             </div>
-            <div class="row">
-                <div class="col-sm-2">50</div>
-                <div class="col-sm-2">50</div>
-                <div class="col-sm-2">50</div>
-                <div class="col-sm-2">50</div>
-                <div class="col-sm-2">50</div>     
+            <div class="row" id="third-row">
+                <div class="col-sm-2 three-hundred-1">$300</div>
+                <div class="col-sm-2 three-hundred-2">$300</div>
+                <div class="col-sm-2 three-hundred-3">$300</div>
+                <div class="col-sm-2 three-hundred-4">$300</div>
+                <div class="col-sm-2 three-hundred-5">$300</div>     
             </div>
-            <div class="row">
-                <div class="col-sm-2">60</div>
-                <div class="col-sm-2">60</div>
-                <div class="col-sm-2">60</div>
-                <div class="col-sm-2">60</div>
-                <div class="col-sm-2">60</div>     
+            <div class="row" id="forth-row">
+                <div class="col-sm-2 four-hundred-1">$400</div>
+                <div class="col-sm-2 four-hundred-2">$400</div>
+                <div class="col-sm-2 four-hundred-3">$400</div>
+                <div class="col-sm-2 four-hundred-4">$400</div>
+                <div class="col-sm-2 four-hundred-5">$400</div>     
             </div>
+            <div class="row" id="fifth-row">
+                <div class="col-sm-2 five-hundred-1">$500</div>
+                <div class="col-sm-2 five-hundred-2">$500</div>
+                <div class="col-sm-2 five-hundred-3">$500</div>
+                <div class="col-sm-2 five-hundred-4">$500</div>
+                <div class="col-sm-2 five-hundred-5">$500</div>     
+            </div>  
+            <!-- <div class="row">
+                <div class="col-sm-10 final-question">Final Question</div>
+            </div> -->
             <div class="row">
-                <div class="col-sm-2">40</div>
-                <div class="col-sm-2">40</div>
-                <div class="col-sm-2">40</div>
-                <div class="col-sm-2">40</div>
-                <div class="col-sm-2">40</div>     
-            </div>
-            <div class="row">
-                <div class="col-sm-12">Final Question</div>
-            </div>
+                <div class="col-sm-6 score-board">
+                   <p>Player Score:     $<span id="score">0</span></p>
+                </div>
+            </div>   
         </div> <!--end main-->
     </div>
-
-
-
-
-
-
-<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="js/app.js"></script>
 </body>
 </html>
