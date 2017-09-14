@@ -24,12 +24,8 @@ h1{
     text-shadow: 2px 2px rgb(0, 153, 204);
 }
 button{
-   
     height: 100%;
     width: 100%;
-        /* box-shadow: 3px 3px 5px 6px #ccc; 
-        margin: 5px;
-        text-shadow: 2px 2px rgb(0, 153, 204); */
 }
 
 
@@ -110,6 +106,19 @@ img{
     border-radius: 10px;
     font-family: 'Passion One', cursive;
     line-height: 80px;
+    /* box-shadow: 3px 3px 5px 6px #ccc;  */
+    position: relative;
+    left: 27    0px;
+    /* border: 1px solid #696969; */
+    margin: 5px;
+}
+#wrong{
+    font-size: 3em;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Passion One', cursive;
+    line-height: 80px;
+    color: #fff;
     /* box-shadow: 3px 3px 5px 6px #ccc;  */
     position: relative;
     left: 27    0px;
