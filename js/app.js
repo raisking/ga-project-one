@@ -48,7 +48,6 @@ let php ={
             Q5: "Which of the following method can be used to create a MySql database using PHP? hint 'mysql_query()'",
             A5: "mysql_query()"
 }
-
 let c ={
             Q1: "Which of the following keyword is used for including the namespaces in the program in C#? hint'using'",
             A1: "using",
@@ -64,9 +63,16 @@ let c ={
 let playerScore = document.getElementById('score'); //global variable
 // let playerScore = $('#score'); //global variable
 playerScore = parseInt('0');
+let makeNoise = new Audio();
+makeNoise.src = "sound/bell.mp3"; //global 
+let failNoise = new Audio(); // wrong alert
+failNoise.src = "sound/alert-game-lost.mp3"
+let winNoise = new Audio(); //correct alert
+winNoise.src = "sound/alert-game-win.mp3"
 /*----------------------CSS---------------------------------------------*/
 $(document).ready(function(){
     $('.hundred-1').dblclick(function(){
+        makeNoise.play();
     $('.hundred-1').empty();
     // $('.hundred-1').detach();
     // this.disabled = true;    
@@ -76,6 +82,7 @@ $(document).ready(function(){
                 cssQ1 = prompt("You forgot to enter your answer.");
             } 
             if(cssQ1.toLowerCase() === css.A1) {
+                winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
                 document.getElementById('score').innerHTML = playerScore;      
@@ -85,6 +92,7 @@ $(document).ready(function(){
             // }
             }                
             else{
+                failNoise.play();
                 alert("Wrong!!!");
                 playerScore -= 100;
                 document.getElementById('score').innerHTML = playerScore;
