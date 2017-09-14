@@ -9,7 +9,7 @@ let css = {
             A3: "border",
             Q4: "Which of the following value of cursor shows it as the 'I' bar? hint'move'",
             A4: "move",
-            Q5: "Which of the following property is used to set the text direction? hint 'directon'",
+            Q5: "Which of the following property is used to set the text direction? hint 'direction'",
             A5: "direction"
          }
 let js = { 
@@ -63,16 +63,20 @@ let c ={
 let playerScore = document.getElementById('score'); //global variable
 // let playerScore = $('#score'); //global variable
 playerScore = parseInt('0');
+let musicStart = new Audio();
+musicStart.src = "sound/house_party.mp3";
 let makeNoise = new Audio();
 makeNoise.src = "sound/bell.mp3"; //global 
 let failNoise = new Audio(); // wrong alert
-failNoise.src = "sound/alert-game-lost.mp3"
+failNoise.src = "sound/alert-game-lost.mp3";
 let winNoise = new Audio(); //correct alert
-winNoise.src = "sound/alert-game-win.mp3"
+winNoise.src = "sound/alert-game-win.mp3";
 /*----------------------CSS---------------------------------------------*/
 $(document).ready(function(){
+    makeNoise.play();
+    musicStart.play();
     $('.hundred-1').dblclick(function(){
-        makeNoise.play();
+        //();
     $('.hundred-1').empty();
     // $('.hundred-1').detach();
     // this.disabled = true;    
@@ -103,6 +107,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $('.two-hundred-1').dblclick(function(){
+        //();
     $('.two-hundred-1').empty();
         while(!cssQ2){
         var cssQ2 = prompt(css.Q2);
@@ -110,11 +115,13 @@ $(document).ready(function(){
             cssQ2 = prompt("You forget to enter your answer.");
             }
         if(cssQ2.toLowerCase() === css.A2) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
@@ -124,6 +131,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.three-hundred-1').dblclick(function(){
+        //()
     $('.three-hundred-1').empty();
         while(!cssQ3){
         var cssQ3 = prompt(css.Q3);
@@ -131,11 +139,13 @@ $(document).ready(function(){
             cssQ3 = prompt("You forget to enter your answer.");            
             }
         if(cssQ3.toLowerCase() === css.A3) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
@@ -145,6 +155,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.four-hundred-1').dblclick(function(){
+        //();
     $('.four-hundred-1').empty();
         while(!cssQ4){
         var cssQ4 = prompt(css.Q4);
@@ -152,11 +163,13 @@ $(document).ready(function(){
             cssQ4 = prompt("You forget to enter your answer.");            
         }
         if(cssQ4.toLowerCase() === css.A4) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
@@ -166,6 +179,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.five-hundred-1').dblclick(function(){
+        //();
     $('.five-hundred-1').empty();
         while(!cssQ5){
         var cssQ5 = prompt(css.Q5);
@@ -173,11 +187,13 @@ $(document).ready(function(){
             cssQ5 = prompt("You forget to enter your answer.");            
         }
         if(cssQ5.toLowerCase() === css.A5) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
@@ -188,6 +204,7 @@ $(document).ready(function(){
 /*----------------------JavaScript---------------------------------------------*/
 $(document).ready(function(){
     $('.hundred-2').dblclick(function(){
+        //();
     $('.hundred-2').empty();
         while(!jsQ1){
         var jsQ1 = prompt(js.Q1);
@@ -195,11 +212,13 @@ $(document).ready(function(){
             jsQ1 = prompt("You forget to enter your answer.");     
         }
         if(jsQ1.toLowerCase() === js.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
@@ -209,6 +228,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.two-hundred-2').dblclick(function(){
+        //();
     $('.two-hundred-2').empty();
         while(!jsQ2){
         var jsQ2 = prompt(js.Q2);
@@ -216,11 +236,13 @@ $(document).ready(function(){
             jsQ2 = prompt("You forget to enter your answer.");     
         }
         if(jsQ2.toLowerCase() === js.A2) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
@@ -230,6 +252,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.three-hundred-2').dblclick(function(){
+        //();
     $('.three-hundred-2').empty();
         while(!jsQ3){
         var jsQ3 = prompt(js.Q3);
@@ -237,11 +260,13 @@ $(document).ready(function(){
             jsQ3 = prompt("You forget to enter your answer."); 
         }
         if(jsQ3.toLowerCase() === js.A3) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
@@ -251,6 +276,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.four-hundred-2').dblclick(function(){
+        //();
     $('.four-hundred-2').empty();
     while (!jsQ4){
         var jsQ4 = prompt(js.Q4);
@@ -258,11 +284,13 @@ $(document).ready(function(){
             jsQ4 = prompt("You forget to enter your answer."); 
         }
         if(jsQ4.toLowerCase() === js.A4) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
@@ -272,6 +300,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.five-hundred-2').dblclick(function(){
+        //();
     $('.five-hundred-2').empty();
     while (!jsQ5){
         var jsQ5 = prompt(js.Q5);
@@ -279,11 +308,13 @@ $(document).ready(function(){
             jsQ5 = prompt("You forget to enter your answer."); 
         }
         if(jsQ5.toLowerCase() === js.A5) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
@@ -294,6 +325,7 @@ $(document).ready(function(){
 /*----------------------Java---------------------------------------------*/
 $(document).ready(function(){
     $('.hundred-3').dblclick(function(){
+        //();
     $('.hundred-3').empty();
     while(!jvQ1){
         var jvQ1 = prompt(java.Q1);
@@ -301,11 +333,13 @@ $(document).ready(function(){
             jvQ1 = prompt("You forget to enter your answer."); 
         }
         if(jvQ1.toLowerCase() === java.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
@@ -315,6 +349,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.two-hundred-3').dblclick(function(){
+        //();
     $('.two-hundred-3').empty();
     while(!jvQ2){
         var jvQ2 = prompt(java.Q2);
@@ -322,11 +357,13 @@ $(document).ready(function(){
             jvQ2 = prompt("You forget to enter your answer."); 
         }
         if(jvQ2.toLowerCase() === java.A2) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
@@ -336,6 +373,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.three-hundred-3').dblclick(function(){
+        //();
     $('.three-hundred-3').empty();
     while(!jvQ3){
         var jvQ3 = prompt(java.Q3);
@@ -343,11 +381,13 @@ $(document).ready(function(){
             jvQ3 = prompt("You forget to enter your answer."); 
         }
         if(jvQ3.toLowerCase() === java.A3) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
@@ -357,6 +397,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.four-hundred-3').dblclick(function(){
+        //();
     $('.four-hundred-3').empty();
         while(!jvQ4){
         var jvQ4 = prompt(java.Q4);
@@ -364,11 +405,13 @@ $(document).ready(function(){
             jvQ4 = prompt("You forget to enter your answer."); 
         }
         if(jvQ4.toLowerCase() === java.A4) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
@@ -378,6 +421,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.five-hundred-3').dblclick(function(){
+        //();
     $('.five-hundred-3').empty();
     while(!jvQ5){
         var jvQ5 = prompt(java.Q5);
@@ -385,11 +429,13 @@ $(document).ready(function(){
             jvQ5 = prompt("You forget to enter your answer."); 
         }
         if(jvQ5.toLowerCase() === java.A5) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
@@ -400,6 +446,7 @@ $(document).ready(function(){
 /*----------------------PHP---------------------------------------------*/
 $(document).ready(function(){
     $('.hundred-4').dblclick(function(){
+        //();
     $('.hundred-4').empty();
         while(!ppQ1){
         var ppQ1 = prompt(php.Q1);
@@ -407,11 +454,13 @@ $(document).ready(function(){
             ppQ1 = prompt("You forget to enter your answer."); 
         }
         if(ppQ1.toLowerCase() === php.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
@@ -421,6 +470,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.two-hundred-4').dblclick(function(){
+        //();
     $('.two-hundred-4').empty();
     while(!ppQ2){
         var ppQ2 = prompt(php.Q2);
@@ -428,11 +478,13 @@ $(document).ready(function(){
             ppQ2 = prompt("You forget to enter your answer."); 
         }
         if(ppQ2.toLowerCase() === php.A2) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
@@ -442,6 +494,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.three-hundred-4').dblclick(function(){
+        //();
     $('.three-hundred-4').empty();
     while(!ppQ3){
         var ppQ3 = prompt(php.Q3);
@@ -449,11 +502,13 @@ $(document).ready(function(){
             ppQ3 = prompt("You forget to enter your answer."); 
         }
         if(ppQ3.toLowerCase() === php.A3) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
@@ -463,6 +518,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.four-hundred-4').dblclick(function(){
+        //();
     $('.four-hundred-4').empty();
     while(!ppQ4){
         var ppQ4 = prompt(php.Q4);
@@ -470,11 +526,13 @@ $(document).ready(function(){
             ppQ4 = prompt("You forget to enter your answer."); 
         }
         if(ppQ4.toLowerCase() === php.A4) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
@@ -484,6 +542,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.five-hundred-4').dblclick(function(){
+        //();
     $('.five-hundred-4').empty();
     while(!ppQ5){
         var ppQ5 = prompt(php.Q5);
@@ -491,11 +550,13 @@ $(document).ready(function(){
             ppQ5 = prompt("You forget to enter your answer."); 
         }
         if(ppQ5.toLowerCase() === php.A5) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
@@ -506,6 +567,7 @@ $(document).ready(function(){
 /*----------------------C#---------------------------------------------*/
 $(document).ready(function(){
     $('.hundred-5').dblclick(function(){
+        //();
     $('.hundred-5').empty();
     while(!cQ1){
         var cQ1 = prompt(c.Q1);
@@ -513,11 +575,13 @@ $(document).ready(function(){
             cQ1 = prompt("You forget to enter your answer."); 
         }
         if(cQ1.toLowerCase() === c.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
@@ -527,6 +591,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.two-hundred-5').dblclick(function(){
+        //();
     $('.two-hundred-5').empty();
     while(!cQ2){
         var cQ2 = prompt(c.Q2);
@@ -534,11 +599,13 @@ $(document).ready(function(){
             cQ2 = prompt("You forget to enter your answer."); 
         }
         if(cQ2.toLowerCase() === c.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
@@ -548,6 +615,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.three-hundred-5').dblclick(function(){
+        //();
     $('.three-hundred-5').empty();
     while(!cQ3){
         var cQ3 = prompt(c.Q3);
@@ -555,11 +623,13 @@ $(document).ready(function(){
             cQ3 = prompt("You forget to enter your answer."); 
         }
         if(cQ3.toLowerCase() === c.A1) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
@@ -569,6 +639,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.four-hundred-5').dblclick(function(){
+        //();
     $('.four-hundred-5').empty();
     while(!cQ4){
         var cQ4 = prompt(c.Q4);
@@ -576,11 +647,13 @@ $(document).ready(function(){
             cQ4 = prompt("You forget to enter your answer."); 
         }
         if(cQ4.toLowerCase() === c.A4) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
@@ -590,6 +663,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.five-hundred-5').dblclick(function(){
+        //();
     $('.five-hundred-5').empty();
     while(!cQ5)
         var cQ5 = prompt(c.Q5);
@@ -597,11 +671,13 @@ $(document).ready(function(){
             cQ5 = prompt("You forget to enter your answer."); 
         }
         if(cQ5.toLowerCase() === c.A5) {
+            winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
              }
         else{
+            failNoise.play();   
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
