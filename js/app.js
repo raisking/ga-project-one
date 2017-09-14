@@ -60,7 +60,7 @@ let c ={
             Q5: "Which of the following preprocessor directive allows you to undefine a symbol in C#? hint'undef'",
             A5: "undef"
 }
-//this start soon as page is loaded 
+//this start soon as page is loaded
 // window.onload = function(){
 //     let user = prompt("Please enter your name");
 //     if(user != null){
@@ -70,13 +70,16 @@ let c ={
 //     }
 // };
 $(document).ready(function(){
-    setTimeout(function(){ 
+    setTimeout(function(){
         let user = prompt("Please enter your name");
-        if(user != null){
+        while(!user){
+        if(user === null || user === ""){
+           user = prompt("You must enter your name");
+        } 
+        else if(user === true){
             document.getElementById('playerName').innerHTML = user + " Score:";
-        } else if( user = null){
-            alert("You forget to enter your name")
         }
+    }
        PopUp();
     },3000); // Dialog pop up after 3 sec page load
  });
