@@ -1,45 +1,50 @@
 
 
-
-const css = [
-    {cssQ1: "Which of the following defines a relative measurement for the height of a font in em spaces?"},
-    {cssA1: "em"},
-    {cssQ2: "Which of the following defines 1% of viewport width? hint: 'vh'"},
-    {cssA2: "vh"},
-    {cssQ3: "Which of the following property is used to set the width of an image border? hint'border'"},
-    {cssA3: "border"},
-    {cssQ4: "Which of the following value of cursor shows it as the 'I' bar? hint'move'"},
-    {cssA4: "move"},
-    {cssQ5: "Which of the following property is used to set the text direction? hint 'directon'"},
-    {cssA4: "direction"}
+let css = [
+    {Q1: "Which of the following defines a relative measurement for the height of a font in em spaces?"},
+    {A1: "em"},
+    {Q2: "Which of the following defines 1% of viewport width? hint: 'vh'"},
+    {A2: "vh"},
+    {Q3: "Which of the following property is used to set the width of an image border? hint'border'"},
+    {A3: "border"},
+    {Q4: "Which of the following value of cursor shows it as the 'I' bar? hint'move'"},
+    {A4: "move"},
+    {Q5: "Which of the followi  ng property is used to set the text direction? hint 'directon'"},
+    {A4: "direction"}
 ]; 
-
-
-
 // let playerScore = document.getElementById('score'); //global variable
 let playerScore = $('#score'); //global variable
 playerScore = parseInt('0');
-
 //CSS
 $(document).ready(function(){
     $('.hundred-1').click(function(){
     $('.hundred-1').empty();
-        var cssQ1 = prompt(`${css[cssQ1]}`);
-        if(cssQ1.toLowerCase() === 'em') {
+        while(!cssQ1){
+            var cssQ1 = prompt(css[0]);
+            if(cssQ1 === null || cssQ1=== false || cssQ1 === ""){
+               var cssQ1 = prompt("You forgot to enter your answer.");
+            } 
+        // if (cssQ1 === " "){ 
+        //     var cssQ1 = prompt("You must input something");
+        // }
+            if(cssQ1.toLowerCase() === 'em') {
             alert("correct!!!"); 
             playerScore += 100;
-            document.getElementById('score').innerHTML = playerScore;  
-            function play(){
-                var audio = document.getElementById("audio");
-                audio.play();
-            }
-             }
-        else{
-            alert("Wrong!!!");
-            playerScore -= 100;
-            document.getElementById('score').innerHTML = playerScore;
-        }       
+            document.getElementById('score').innerHTML = playerScore;      
+            // function play(){
+            //     var audio = document.getElementById("audio");
+            //     audio.play();
+            // }
+
+            }                
+            else{
+                alert("Wrong!!!");
+                playerScore -= 100;
+                document.getElementById('score').innerHTML = playerScore;
+        }   
+     }    
     });
+    
 }); 
 $(document).ready(function(){
     $('.two-hundred-1').click(function(){
