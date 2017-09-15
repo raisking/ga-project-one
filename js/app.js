@@ -24,7 +24,7 @@ $(document).ready(function(){
         } 
     }
     //    PopUp();
-    },4000); // Dialog pop up after 4 sec page load
+    },3500); // Dialog pop up after 3500 page load
  });
 
 let playerScore = document.getElementById('score'); //global variable
@@ -57,12 +57,13 @@ if the score is minus, add 1 to number of wrong counter
 //     numberOfClicks += 1;
 //     document.getElementById
 // }
-$('.col-sm-2').dblclick(function(){
-        
-          if (playerScore >= 2000 || playerScore <= 1000){
-                $('.col-sm-2').css('visibility', 'hidden');  
-            }
-})
+// $('.col-sm-2').dblclick(function(){      
+//           if (playerScore >= 2000 || playerScore <= 1000){
+//                 // $('.col-sm-2').css('visibility', 'hidden');  
+//                 alert("lkafdka");
+//             }
+// })
+
 /*----------------------CSS---------------------------------------------*/
 // $(document).ready(function(){
 //     $(.hundred-1).dblclick(function(){
@@ -767,6 +768,7 @@ $(document).ready(function(){
             // if (playerScore > 100){
             //     $('.col-sm-2').css('visibility', 'hidden');  
             // }
+
       
     }
 
