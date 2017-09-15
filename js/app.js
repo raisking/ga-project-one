@@ -51,6 +51,11 @@ if the score is minus, add 1 to number of wrong counter
 // function hideDiv(){
 //     $('.col-sm-2').css('visibility', 'hidden'); 
 // }
+// let numberOfClicks = 0;
+// function dblclick(){
+//     numberOfClicks += 1;
+//     document.getElementById
+// }
 
 /*----------------------CSS---------------------------------------------*/
 // $(document).ready(function(){
@@ -78,7 +83,7 @@ $(document).ready(function(){
             if(cssQ1 === null || cssQ1 === false || cssQ1 === ""){
                 cssQ1 = prompt("You forgot to enter your answer.");
             } 
-            if(cssQ1.toLowerCase() === css.A1) {
+            if(cssQ1.toLowerCase() === "What is "+css.A1) {
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
@@ -732,3 +737,22 @@ $(document).ready(function(){
         }       
     });
 });
+
+/*
+ - keep track of cash win
+ - if cash win is more than 2000
+ - if cash lose is more than 1000
+ - then close / disable the game
+ - else keep playing
+*/
+    function keepTrackOfScore(){
+            // while (playerScore > 2000 || playerScore < -1000){
+            //     $(this).css('visibility', 'hidden'); 
+            // }
+            // if (playerScore < 2000 || playerScore > -1000){
+            //     $('.col-sm-2').css('visibility', 'none'); 
+            // } else {
+            //     $('.col-sm-2').css('visibility', 'hidden');                 
+            // }
+    }
+    keepTrackOfScore();
