@@ -77,7 +77,7 @@ $(document).ready(function(){
                 user = prompt("You must enter your name");
             }
         if(user === user){
-            alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");
+            // alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");    
             document.getElementById('playerName').innerHTML = user.toUpperCase() + " Score : ".toUpperCase();
         } 
     }
@@ -107,7 +107,9 @@ check the score.
 if the score is added, add 1 to number of correct counter
 if the score is minus, add 1 to number of wrong counter 
 */
-
+// function hideDiv(){
+//     $('.col-sm-2').css('visibility', 'hidden'); 
+// }
 
 /*----------------------CSS---------------------------------------------*/
 // $(document).ready(function(){
@@ -139,7 +141,8 @@ $(document).ready(function(){
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
-                document.getElementById('score').innerHTML = playerScore;    
+                document.getElementById('score').innerHTML = playerScore;  
+                $(this).css('visibility', 'hidden'); 
                 // $(".hundred-1").unbind("click");
                 // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
                 // $('.hundred-1').attr('disabled','disabled');
@@ -148,13 +151,13 @@ $(document).ready(function(){
                 // $('.hundred-1').bind('click', function(){ 
                 //     return false; 
                 // });
-            }   
-                        
+            }                  
             else{
                 failNoise.play();
                 alert("Wrong!!!");
                 playerScore -= 100;
                 document.getElementById('score').innerHTML = playerScore;
+                $(this).css('visibility', 'hidden'); 
         }   
      }    
     });   
@@ -173,13 +176,15 @@ $(document).ready(function(){
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
-            document.getElementById('score').innerHTML = playerScore;  
+            document.getElementById('score').innerHTML = playerScore; 
+            $(this).css('visibility', 'hidden');  
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
          }  
         }     
     });
@@ -198,12 +203,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
          } 
         }      
     });
@@ -221,13 +228,15 @@ $(document).ready(function(){
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
-            document.getElementById('score').innerHTML = playerScore;  
+            document.getElementById('score').innerHTML = playerScore; 
+            $(this).css('visibility', 'hidden');  
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
             }  
         }     
     });
@@ -246,12 +255,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
             }   
         }    
     });
@@ -271,12 +282,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }  
     }     
     });
@@ -295,12 +308,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         } 
     }      
     });
@@ -319,12 +334,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     }
     });
@@ -343,12 +360,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     }
     });
@@ -367,12 +386,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     }
     });
@@ -392,12 +413,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }   
     }    
     });
@@ -415,13 +438,15 @@ $(document).ready(function(){
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
-            document.getElementById('score').innerHTML = playerScore;  
+            document.getElementById('score').innerHTML = playerScore; 
+            $(this).css('visibility', 'hidden');  
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }
     }       
     });
@@ -440,12 +465,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     }
     });
@@ -464,12 +491,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         } 
     }      
     });
@@ -488,12 +517,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }     
     }  
     });
@@ -513,12 +544,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }  
     }     
     });
@@ -537,12 +570,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }   
     }    
     });
@@ -561,12 +596,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }
     }       
     });
@@ -585,12 +622,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         } 
     }      
     });
@@ -609,12 +648,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         } 
     }
     });
@@ -634,12 +675,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }
     }       
     });
@@ -658,12 +701,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     }
     });
@@ -682,12 +727,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }  
     }     
     });
@@ -706,12 +753,15 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
+            
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         } 
     }      
     });            
@@ -730,12 +780,14 @@ $(document).ready(function(){
             alert("correct!!!"); 
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
+            $(this).css('visibility', 'hidden'); 
              }
         else{
             failNoise.play();   
             alert("Wrong!!!");
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
+            $(this).css('visibility', 'hidden'); 
         }       
     });
 });
