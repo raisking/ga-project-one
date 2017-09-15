@@ -71,15 +71,15 @@ button{
     left: 70px;
 
 }
-
 .col-sm-2:hover{
     background: linear-gradient(-90deg, rgb(0, 102, 255),rgb(0, 153, 204), rgb(230, 249, 255)); 
-    transform: skew(5deg);
+    /* transform: skew(5deg); */
+    transform: rotateX(360deg);
     /* transform-origin: top bottom; */
     color: rgb(255,0,0);
     border: 1px solid rgb(255,0,0);
-    border-top-left-radius: 100% 20px;
-    border-bottom-right-radius: 100% 20px;
+    /* border-top-left-radius: 100% 20px;
+    border-bottom-right-radius: 100% 20px; */
     transition-duration: 0.9s;  
 }
 img{
