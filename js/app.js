@@ -23,7 +23,7 @@ $(document).ready(function(){
         } 
     }
     //    PopUp();
-    },3000); // Dialog pop up after 3 sec page load
+    },4000); // Dialog pop up after 4 sec page load
  });
 
 let playerScore = document.getElementById('score'); //global variable
@@ -83,7 +83,7 @@ $(document).ready(function(){
             if(cssQ1 === null || cssQ1 === false || cssQ1 === ""){
                 cssQ1 = prompt("You forgot to enter your answer.");
             } 
-            if(cssQ1.toLowerCase() === "What is "+css.A1) {
+            if(cssQ1.toLowerCase() === "What is     "+css.A1) {
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
@@ -737,7 +737,9 @@ $(document).ready(function(){
         }       
     });
 });
-
+$(document).ready(function(){
+    $('#reset').reset();
+})
 /*
  - keep track of cash win
  - if cash win is more than 2000
@@ -754,5 +756,11 @@ $(document).ready(function(){
             // } else {
             //     $('.col-sm-2').css('visibility', 'hidden');                 
             // }
+      
     }
     keepTrackOfScore();
+
+    /*
+    When score is add , add +1 correct 
+    when score is minus, add =1 wrong
+    */
