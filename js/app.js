@@ -1,15 +1,5 @@
-
-
 document.write('<script type="text/javascript" src="js/appOne.js"></script>');
 //this start soon as page is loaded
-// window.onload = function(){
-//     let user = prompt("Please enter your name");
-//     if(user != null){
-//         document.getElementById('playerName').innerHTML = user + " Score:";
-//     } else if( user = null){
-//         alert("You must enter your name")
-//     }
-// };
 $(document).ready(function(){
     setTimeout(function(){
         while(!user){
@@ -55,38 +45,19 @@ check the score.
 if the score is added, add 1 to number of correct counter
 if the score is minus, add 1 to number of wrong counter 
 */
-// function hideDiv(){
-//     $('.col-sm-2').css('visibility', 'hidden'); 
-// }
-// let numberOfClicks = 0;
-// function dblclick(){
-//     numberOfClicks += 1;
-//     document.getElementById
-// }
-// $('.col-sm-2').dblclick(function(){      
-//           if (playerScore >= 2000 || playerScore <= 1000){
-//                 // $('.col-sm-2').css('visibility', 'hidden');  
-//                 alert("lkafdka");
+
+// $('.col-sm-2').click(function(){      
+//           if (numWrong > 3){
+//                 $('.col-sm-2').css('visibility', 'hidden');  
+//                 // alert("lkafdka");
 //             }
 // })
 
 /*----------------------CSS---------------------------------------------*/
-// $(document).ready(function(){
-//     $(.hundred-1).dblclick(function(){
-//     for(var i =0 in css){
-//         var q = prompt(css.Q1);
-//           if (q === css.A1){
-//              console.log("right"); 
-//           }  
-    
-//     }
-      
-//   })
-// })
 $(document).ready(function(){
     makeNoise.play();
-    musicStart.play();
-    $('.hundred-1').dblclick(function(){
+    // musicStart.play();
+    $('.hundred-1').click(function(){
         //();
     $('.hundred-1').empty();
     // $('.hundred-1').detach();
@@ -104,17 +75,7 @@ $(document).ready(function(){
                 $(this).css('visibility', 'hidden');  
                 numRight += 1;
                 document.getElementById('countCorrect').innerHTML = numRight;
-                
-                // $(".hundred-1").unbind("click");
-                // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
-                // $('.hundred-1').attr('disabled','disabled');
-                // $('.hundred-1').off('cick');
-                // $('.hundred-1').css('pointer-events', 'none');
-                // $('.hundred-1').bind('click', function(){ 
-                //     return false; 
-                // });
-            }    
-                          
+            }                     
             else{
                 failNoise.play();
                 alert("Wrong!!!");
@@ -126,12 +87,12 @@ $(document).ready(function(){
                 
                 
         }   
-     }    
+     }      
     });   
 }); 
 
 $(document).ready(function(){
-    $('.two-hundred-1').dblclick(function(){
+    $('.two-hundred-1').click(function(){
         //();
     $('.two-hundred-1').empty();
         while(!cssQ2){
@@ -147,7 +108,6 @@ $(document).ready(function(){
             $(this).css('visibility', 'hidden');  
             numRight += 1;
             document.getElementById('countCorrect').innerHTML = numRight;
-        
              }
         else{
             failNoise.play();
@@ -156,14 +116,13 @@ $(document).ready(function(){
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
             numWrong += 1;
-            document.getElementById('countWrong').innerHTML = numWrong;
-            
+            document.getElementById('countWrong').innerHTML = numWrong;      
          }  
         }     
     });
 });
 $(document).ready(function(){
-    $('.three-hundred-1').dblclick(function(){
+    $('.three-hundred-1').click(function(){
         //()
     $('.three-hundred-1').empty();
         while(!cssQ3){
@@ -195,7 +154,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.four-hundred-1').dblclick(function(){
+    $('.four-hundred-1').click(function(){
         //();
     $('.four-hundred-1').empty();
         while(!cssQ4){
@@ -227,7 +186,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.five-hundred-1').dblclick(function(){
+    $('.five-hundred-1').click(function(){
         //();
     $('.five-hundred-1').empty();
         while(!cssQ5){
@@ -260,7 +219,7 @@ $(document).ready(function(){
 });
 /*----------------------JavaScript---------------------------------------------*/
 $(document).ready(function(){
-    $('.hundred-2').dblclick(function(){
+    $('.hundred-2').click(function(){
         //();
     $('.hundred-2').empty();
         while(!jsQ1){
@@ -292,7 +251,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.two-hundred-2').dblclick(function(){
+    $('.two-hundred-2').click(function(){
         //();
     $('.two-hundred-2').empty();
         while(!jsQ2){
@@ -324,7 +283,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.three-hundred-2').dblclick(function(){
+    $('.three-hundred-2').click(function(){
         //();
     $('.three-hundred-2').empty();
         while(!jsQ3){
@@ -356,7 +315,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.four-hundred-2').dblclick(function(){
+    $('.four-hundred-2').click(function(){
         //();
     $('.four-hundred-2').empty();
     while (!jsQ4){
@@ -388,7 +347,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.five-hundred-2').dblclick(function(){
+    $('.five-hundred-2').click(function(){
         //();
     $('.five-hundred-2').empty();
     while (!jsQ5){
@@ -421,7 +380,7 @@ $(document).ready(function(){
 }); 
 /*----------------------Java---------------------------------------------*/
 $(document).ready(function(){
-    $('.hundred-3').dblclick(function(){
+    $('.hundred-3').click(function(){
         //();
     $('.hundred-3').empty();
     while(!jvQ1){
@@ -453,7 +412,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.two-hundred-3').dblclick(function(){
+    $('.two-hundred-3').click(function(){
         //();
     $('.two-hundred-3').empty();
     while(!jvQ2){
@@ -485,7 +444,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.three-hundred-3').dblclick(function(){
+    $('.three-hundred-3').click(function(){
         //();
     $('.three-hundred-3').empty();
     while(!jvQ3){
@@ -517,7 +476,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.four-hundred-3').dblclick(function(){
+    $('.four-hundred-3').click(function(){
         //();
     $('.four-hundred-3').empty();
         while(!jvQ4){
@@ -549,7 +508,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.five-hundred-3').dblclick(function(){
+    $('.five-hundred-3').click(function(){
         //();
     $('.five-hundred-3').empty();
     while(!jvQ5){
@@ -582,7 +541,7 @@ $(document).ready(function(){
 });
 /*----------------------PHP---------------------------------------------*/
 $(document).ready(function(){
-    $('.hundred-4').dblclick(function(){
+    $('.hundred-4').click(function(){
         //();
     $('.hundred-4').empty();
         while(!ppQ1){
@@ -614,7 +573,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.two-hundred-4').dblclick(function(){
+    $('.two-hundred-4').click(function(){
         //();
     $('.two-hundred-4').empty();
     while(!ppQ2){
@@ -646,7 +605,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.three-hundred-4').dblclick(function(){
+    $('.three-hundred-4').click(function(){
         //();
     $('.three-hundred-4').empty();
     while(!ppQ3){
@@ -678,7 +637,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.four-hundred-4').dblclick(function(){
+    $('.four-hundred-4').click(function(){
         //();
     $('.four-hundred-4').empty();
     while(!ppQ4){
@@ -710,7 +669,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.five-hundred-4').dblclick(function(){
+    $('.five-hundred-4').click(function(){
         //();
     $('.five-hundred-4').empty();
     while(!ppQ5){
@@ -743,7 +702,7 @@ $(document).ready(function(){
 });
 /*----------------------C#---------------------------------------------*/
 $(document).ready(function(){
-    $('.hundred-5').dblclick(function(){
+    $('.hundred-5').click(function(){
         //();
     $('.hundred-5').empty();
     while(!cQ1){
@@ -775,7 +734,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.two-hundred-5').dblclick(function(){
+    $('.two-hundred-5').click(function(){
         //();
     $('.two-hundred-5').empty();
     while(!cQ2){
@@ -807,7 +766,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.three-hundred-5').dblclick(function(){
+    $('.three-hundred-5').click(function(){
         //();
     $('.three-hundred-5').empty();
     while(!cQ3){
@@ -839,7 +798,7 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $('.four-hundred-5').dblclick(function(){
+    $('.four-hundred-5').click(function(){
         //();
     $('.four-hundred-5').empty();
     while(!cQ4){
@@ -872,7 +831,7 @@ $(document).ready(function(){
     });            
 });
 $(document).ready(function(){
-    $('.five-hundred-5').dblclick(function(){
+    $('.five-hundred-5').click(function(){
         //();
     $('.five-hundred-5').empty();
     while(!cQ5)
@@ -902,9 +861,7 @@ $(document).ready(function(){
         }       
     });
 });
-// $(document).ready(function(){
-//     $('#reset').reset();
-// })
+
 /*
  - keep track of cash win
  - if cash win is more than 2000
@@ -912,24 +869,6 @@ $(document).ready(function(){
  - then close / disable the game
  - else keep playing
 */
-    function keepTrackOfScore(){
-            // while (playerScore > 2000 || playerScore < -1000){
-            //     $(this).css('visibility', 'hidden'); 
-            // }
-            // if (playerScore < 2000 || playerScore > -1000){
-            //     $('.col-sm-2').css('visibility', 'none'); 
-            // } else {
-            //     $('.col-sm-2').css('visibility', 'hidden');                 
-            // }
-            // if (playerScore > 100){
-            //     $('.col-sm-2').css('visibility', 'hidden');  
-            // }
-            
-
-      
-    }
-
-
     /*
     When score is add , add +1 correct 
     when score is minus, add =1 wrong
