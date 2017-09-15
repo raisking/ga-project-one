@@ -101,10 +101,9 @@ $(document).ready(function(){
                 alert("correct!!!"); 
                 playerScore += 100;
                 document.getElementById('score').innerHTML = playerScore;  
-                $(this).css('visibility', 'hidden'); 
-            
-                    numRight += 1;
-                    document.getElementById('countCorrect').innerHTML = numRight;
+                $(this).css('visibility', 'hidden');  
+                numRight += 1;
+                document.getElementById('countCorrect').innerHTML = numRight;
                 
                 // $(".hundred-1").unbind("click");
                 // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
