@@ -1,5 +1,3 @@
-
-
 let css = {
     Q1: "Which of the following defines a relative measurement for the height of a font in em spaces? \nOption: \n1) em \n2) hm \n3) rem \n4) dm",
     A1: "em",  

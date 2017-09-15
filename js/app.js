@@ -7,7 +7,7 @@ document.write('<script type="text/javascript" src="js/appOne.js"></script>');
 //     if(user != null){
 //         document.getElementById('playerName').innerHTML = user + " Score:";
 //     } else if( user = null){
-//         alert("You forget to enter your name")
+//         alert("You must enter your name")
 //     }
 // };
 $(document).ready(function(){
@@ -24,12 +24,18 @@ $(document).ready(function(){
         } 
     }
     //    PopUp();
-    },3500); // Dialog pop up after 3500 page load
+    },3500); // Dialog pop up after 3500     page load
  });
 
 let playerScore = document.getElementById('score'); //global variable
 // let playerScore = $('#score'); //global variable
 playerScore = parseInt('0');
+
+let numRight = document.getElementById('countCorrect');
+numRight = parseInt('0');
+let numWrong = document.getElementById('countWrong');
+numWrong = parseInt('0');
+
 let musicStart = new Audio();
 musicStart.src = "sound/house_party.mp3";
 let makeNoise = new Audio();
@@ -96,6 +102,9 @@ $(document).ready(function(){
                 playerScore += 100;
                 document.getElementById('score').innerHTML = playerScore;  
                 $(this).css('visibility', 'hidden'); 
+            
+                    numRight += 1;
+                    document.getElementById('countCorrect').innerHTML = numRight;
                 
                 // $(".hundred-1").unbind("click");
                 // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
@@ -113,6 +122,10 @@ $(document).ready(function(){
                 playerScore -= 100;
                 document.getElementById('score').innerHTML = playerScore;
                 $(this).css('visibility', 'hidden'); 
+                numWrong += 1;
+                document.getElementById('countWrong').innerHTML = numWrong;
+                
+                
         }   
      }    
     });   
@@ -125,7 +138,7 @@ $(document).ready(function(){
         while(!cssQ2){
         var cssQ2 = prompt(css.Q2);
         if(cssQ2 === null || cssQ2 === false || cssQ2 === ""){
-            cssQ2 = prompt("You forget to enter your answer.");
+            cssQ2 = prompt("You must enter your answer.");
             }
         if(cssQ2.toLowerCase() === css.A2) {
             winNoise.play();
@@ -133,6 +146,9 @@ $(document).ready(function(){
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore; 
             $(this).css('visibility', 'hidden');  
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -140,6 +156,9 @@ $(document).ready(function(){
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
          }  
         }     
     });
@@ -151,14 +170,17 @@ $(document).ready(function(){
         while(!cssQ3){
         var cssQ3 = prompt(css.Q3);
         if(cssQ3 === null || cssQ3 === false || cssQ3 === ""){
-            cssQ3 = prompt("You forget to enter your answer.");            
+            cssQ3 = prompt("You must enter your answer.");            
             }
         if(cssQ3.toLowerCase() === css.A3) {
-            winNoise.play();
+            winNoise.play();    
             alert("correct!!!"); 
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -166,6 +188,9 @@ $(document).ready(function(){
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
          } 
         }      
     });
@@ -177,14 +202,17 @@ $(document).ready(function(){
         while(!cssQ4){
         var cssQ4 = prompt(css.Q4);
         if(cssQ4 === null || cssQ4 === false || cssQ4 === ""){
-            cssQ4 = prompt("You forget to enter your answer.");            
+            cssQ4 = prompt("You must enter your answer.");            
         }
         if(cssQ4.toLowerCase() === css.A4) {
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore; 
-            $(this).css('visibility', 'hidden');  
+            $(this).css('visibility', 'hidden');
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+          
              }
         else{
             failNoise.play();
@@ -192,6 +220,9 @@ $(document).ready(function(){
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
             }  
         }     
     });
@@ -203,7 +234,7 @@ $(document).ready(function(){
         while(!cssQ5){
         var cssQ5 = prompt(css.Q5);
         if (cssQ5 === null || cssQ5 === false || cssQ5 === ""){
-            cssQ5 = prompt("You forget to enter your answer.");            
+            cssQ5 = prompt("You must enter your answer.");            
         }
         if(cssQ5.toLowerCase() === css.A5) {
             winNoise.play();
@@ -211,6 +242,9 @@ $(document).ready(function(){
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -218,6 +252,9 @@ $(document).ready(function(){
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
             }   
         }    
     });
@@ -230,7 +267,7 @@ $(document).ready(function(){
         while(!jsQ1){
         var jsQ1 = prompt(js.Q1);
         if(jsQ1 === null || jsQ1 === false || jsQ1 === ""){
-            jsQ1 = prompt("You forget to enter your answer.");     
+            jsQ1 = prompt("You must enter your answer.");     
         }
         if(jsQ1.toLowerCase() === js.A1) {
             winNoise.play();
@@ -238,6 +275,9 @@ $(document).ready(function(){
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -245,6 +285,9 @@ $(document).ready(function(){
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }  
     }     
     });
@@ -256,7 +299,7 @@ $(document).ready(function(){
         while(!jsQ2){
         var jsQ2 = prompt(js.Q2);
         if (jsQ2 === null || jsQ2 === false || jsQ2 === ""){
-            jsQ2 = prompt("You forget to enter your answer.");     
+            jsQ2 = prompt("You must enter your answer.");     
         }
         if(jsQ2.toLowerCase() === js.A2) {
             winNoise.play();
@@ -264,6 +307,9 @@ $(document).ready(function(){
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -271,6 +317,9 @@ $(document).ready(function(){
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         } 
     }      
     });
@@ -282,7 +331,7 @@ $(document).ready(function(){
         while(!jsQ3){
         var jsQ3 = prompt(js.Q3);
         if(jsQ3 === null || jsQ3 === false || jsQ3 === ""){
-            jsQ3 = prompt("You forget to enter your answer."); 
+            jsQ3 = prompt("You must enter your answer."); 
         }
         if(jsQ3.toLowerCase() === js.A3) {
             winNoise.play();
@@ -290,6 +339,9 @@ $(document).ready(function(){
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -297,6 +349,9 @@ $(document).ready(function(){
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     }
     });
@@ -308,7 +363,7 @@ $(document).ready(function(){
     while (!jsQ4){
         var jsQ4 = prompt(js.Q4);
         if(jsQ4 === null || jsQ4 === false || jsQ4 === ""){
-            jsQ4 = prompt("You forget to enter your answer."); 
+            jsQ4 = prompt("You must enter your answer."); 
         }
         if(jsQ4.toLowerCase() === js.A4) {
             winNoise.play();
@@ -316,6 +371,9 @@ $(document).ready(function(){
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -323,6 +381,9 @@ $(document).ready(function(){
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     }
     });
@@ -334,7 +395,7 @@ $(document).ready(function(){
     while (!jsQ5){
         var jsQ5 = prompt(js.Q5);
         if (jsQ5 === null || jsQ5 === false || jsQ5 === ""){
-            jsQ5 = prompt("You forget to enter your answer."); 
+            jsQ5 = prompt("You must enter your answer."); 
         }
         if(jsQ5.toLowerCase() === js.A5) {
             winNoise.play();
@@ -342,6 +403,9 @@ $(document).ready(function(){
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -349,6 +413,9 @@ $(document).ready(function(){
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     }
     });
@@ -361,7 +428,7 @@ $(document).ready(function(){
     while(!jvQ1){
         var jvQ1 = prompt(java.Q1);
         if(jvQ1 === null || jvQ1 === false || jvQ1 === ""){
-            jvQ1 = prompt("You forget to enter your answer."); 
+            jvQ1 = prompt("You must enter your answer."); 
         }
         if(jvQ1.toLowerCase() === java.A1) {
             winNoise.play();
@@ -369,6 +436,9 @@ $(document).ready(function(){
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -376,6 +446,9 @@ $(document).ready(function(){
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }   
     }    
     });
@@ -387,7 +460,7 @@ $(document).ready(function(){
     while(!jvQ2){
         var jvQ2 = prompt(java.Q2);
         if(jvQ2 === null || jvQ2 === false || jvQ2 === ""){
-            jvQ2 = prompt("You forget to enter your answer."); 
+            jvQ2 = prompt("You must enter your answer."); 
         }
         if(jvQ2.toLowerCase() === java.A2) {
             winNoise.play();
@@ -395,6 +468,9 @@ $(document).ready(function(){
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore; 
             $(this).css('visibility', 'hidden');  
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -402,6 +478,9 @@ $(document).ready(function(){
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }
     }       
     });
@@ -413,7 +492,7 @@ $(document).ready(function(){
     while(!jvQ3){
         var jvQ3 = prompt(java.Q3);
         if (jvQ3 === null || jvQ3 === false || jvQ3 === ""){
-            jvQ3 = prompt("You forget to enter your answer."); 
+            jvQ3 = prompt("You must enter your answer."); 
         }
         if(jvQ3.toLowerCase() === java.A3) {
             winNoise.play();
@@ -421,6 +500,9 @@ $(document).ready(function(){
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -428,6 +510,9 @@ $(document).ready(function(){
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     }
     });
@@ -439,7 +524,7 @@ $(document).ready(function(){
         while(!jvQ4){
         var jvQ4 = prompt(java.Q4);
         if (jvQ4 === null || jvQ4 === false || jvQ4 === ""){
-            jvQ4 = prompt("You forget to enter your answer."); 
+            jvQ4 = prompt("You must enter your answer."); 
         }
         if(jvQ4.toLowerCase() === java.A4) {
             winNoise.play();
@@ -447,6 +532,9 @@ $(document).ready(function(){
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -454,6 +542,9 @@ $(document).ready(function(){
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         } 
     }      
     });
@@ -465,7 +556,7 @@ $(document).ready(function(){
     while(!jvQ5){
         var jvQ5 = prompt(java.Q5);
         if (jvQ5 === null || jvQ5 === false || jvQ5 === ""){
-            jvQ5 = prompt("You forget to enter your answer."); 
+            jvQ5 = prompt("You must enter your answer."); 
         }
         if(jvQ5.toLowerCase() === java.A5) {
             winNoise.play();
@@ -473,6 +564,9 @@ $(document).ready(function(){
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -480,6 +574,9 @@ $(document).ready(function(){
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }     
     }  
     });
@@ -492,7 +589,7 @@ $(document).ready(function(){
         while(!ppQ1){
         var ppQ1 = prompt(php.Q1);
         if (ppQ1 === null || ppQ1 === false || ppQ1 === ""){
-            ppQ1 = prompt("You forget to enter your answer."); 
+            ppQ1 = prompt("You must enter your answer."); 
         }
         if(ppQ1.toLowerCase() === php.A1) {
             winNoise.play();
@@ -500,6 +597,9 @@ $(document).ready(function(){
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -507,6 +607,9 @@ $(document).ready(function(){
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }  
     }     
     });
@@ -518,7 +621,7 @@ $(document).ready(function(){
     while(!ppQ2){
         var ppQ2 = prompt(php.Q2);
         if (ppQ2 === null || ppQ2 === false || ppQ2 === ""){
-            ppQ2 = prompt("You forget to enter your answer."); 
+            ppQ2 = prompt("You must enter your answer."); 
         }
         if(ppQ2.toLowerCase() === php.A2) {
             winNoise.play();
@@ -526,13 +629,19 @@ $(document).ready(function(){
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
             alert("Wrong!!!");
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
-            $(this).css('visibility', 'hidden'); 
+            $(this).css('visibility', 'hidden');
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }   
     }    
     });
@@ -544,7 +653,7 @@ $(document).ready(function(){
     while(!ppQ3){
         var ppQ3 = prompt(php.Q3);
         if (ppQ3 === null || ppQ3 === false || ppQ3 === ""){
-            ppQ3 = prompt("You forget to enter your answer."); 
+            ppQ3 = prompt("You must enter your answer."); 
         }
         if(ppQ3.toLowerCase() === php.A3) {
             winNoise.play();
@@ -552,6 +661,9 @@ $(document).ready(function(){
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -559,6 +671,9 @@ $(document).ready(function(){
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }
     }       
     });
@@ -570,7 +685,7 @@ $(document).ready(function(){
     while(!ppQ4){
         var ppQ4 = prompt(php.Q4);
         if (ppQ4 === null || ppQ4 === false || ppQ4 === ""){
-            ppQ4 = prompt("You forget to enter your answer."); 
+            ppQ4 = prompt("You must enter your answer."); 
         }
         if(ppQ4.toLowerCase() === php.A4) {
             winNoise.play();
@@ -578,6 +693,9 @@ $(document).ready(function(){
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -585,6 +703,9 @@ $(document).ready(function(){
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         } 
     }      
     });
@@ -596,7 +717,7 @@ $(document).ready(function(){
     while(!ppQ5){
         var ppQ5 = prompt(php.Q5);
         if (ppQ5 === null || ppQ5 === false || ppQ5 === ""){
-            ppQ5 = prompt("You forget to enter your answer."); 
+            ppQ5 = prompt("You must enter your answer."); 
         }
         if(ppQ5.toLowerCase() === php.A5) {
             winNoise.play();
@@ -604,6 +725,9 @@ $(document).ready(function(){
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -611,6 +735,9 @@ $(document).ready(function(){
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         } 
     }
     });
@@ -623,7 +750,7 @@ $(document).ready(function(){
     while(!cQ1){
         var cQ1 = prompt(c.Q1);
         if (cQ1 === null || cQ1 === false || cQ1 === ""){
-            cQ1 = prompt("You forget to enter your answer."); 
+            cQ1 = prompt("You must enter your answer."); 
         }
         if(cQ1.toLowerCase() === c.A1) {
             winNoise.play();
@@ -631,6 +758,9 @@ $(document).ready(function(){
             playerScore += 100;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -638,6 +768,9 @@ $(document).ready(function(){
             playerScore -= 100;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }
     }       
     });
@@ -649,7 +782,7 @@ $(document).ready(function(){
     while(!cQ2){
         var cQ2 = prompt(c.Q2);
         if (cQ2 === null || cQ2 === false || cQ2 === ""){
-            cQ2 = prompt("You forget to enter your answer."); 
+            cQ2 = prompt("You must enter your answer."); 
         }
         if(cQ2.toLowerCase() === c.A1) {
             winNoise.play();
@@ -657,6 +790,9 @@ $(document).ready(function(){
             playerScore += 200;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -664,6 +800,9 @@ $(document).ready(function(){
             playerScore -= 200;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     }
     });
@@ -675,7 +814,7 @@ $(document).ready(function(){
     while(!cQ3){
         var cQ3 = prompt(c.Q3);
         if (cQ3 === null || cQ3 === false || cQ3 === ""){
-            cQ3 = prompt("You forget to enter your answer."); 
+            cQ3 = prompt("You must enter your answer."); 
         }
         if(cQ3.toLowerCase() === c.A1) {
             winNoise.play();
@@ -683,6 +822,9 @@ $(document).ready(function(){
             playerScore += 300;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();
@@ -690,6 +832,9 @@ $(document).ready(function(){
             playerScore -= 300;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }  
     }     
     });
@@ -701,7 +846,7 @@ $(document).ready(function(){
     while(!cQ4){
         var cQ4 = prompt(c.Q4);
         if (cQ4 === null || cQ4 === false || cQ4 === ""){
-            cQ4 = prompt("You forget to enter your answer."); 
+            cQ4 = prompt("You must enter your answer."); 
         }
         if(cQ4.toLowerCase() === c.A4) {
             winNoise.play();
@@ -709,6 +854,9 @@ $(document).ready(function(){
             playerScore += 400;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
             
              }
         else{
@@ -717,6 +865,9 @@ $(document).ready(function(){
             playerScore -= 400;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         } 
     }      
     });            
@@ -728,7 +879,7 @@ $(document).ready(function(){
     while(!cQ5)
         var cQ5 = prompt(c.Q5);
         if (cQ5 === null || cQ5 === false || cQ5 === ""){
-            cQ5 = prompt("You forget to enter your answer."); 
+            cQ5 = prompt("You must enter your answer."); 
         }
         if(cQ5.toLowerCase() === c.A5) {
             winNoise.play();
@@ -736,6 +887,9 @@ $(document).ready(function(){
             playerScore += 500;
             document.getElementById('score').innerHTML = playerScore;  
             $(this).css('visibility', 'hidden'); 
+            numRight += 1;
+            document.getElementById('countCorrect').innerHTML = numRight;
+        
              }
         else{
             failNoise.play();   
@@ -743,12 +897,15 @@ $(document).ready(function(){
             playerScore -= 500;
             document.getElementById('score').innerHTML = playerScore;
             $(this).css('visibility', 'hidden'); 
+            numWrong += 1;
+            document.getElementById('countWrong').innerHTML = numWrong;
+            
         }       
     });
 });
-$(document).ready(function(){
-    $('#reset').reset();
-})
+// $(document).ready(function(){
+//     $('#reset').reset();
+// })
 /*
  - keep track of cash win
  - if cash win is more than 2000
@@ -768,6 +925,7 @@ $(document).ready(function(){
             // if (playerScore > 100){
             //     $('.col-sm-2').css('visibility', 'hidden');  
             // }
+            
 
       
     }
