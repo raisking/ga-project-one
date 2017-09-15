@@ -13,12 +13,13 @@ document.write('<script type="text/javascript" src="js/appOne.js"></script>');
 $(document).ready(function(){
     setTimeout(function(){
         while(!user){
-        var user = prompt("Please enter your name");  
+        var user = prompt("Please enter your name");   
             if(user === null || user === false){
-                user = prompt("You must enter your name");
+                user = prompt("You must enter your name");   
             }
         if(user === user){
             // alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");    
+            alert(user.toUpperCase() + "\n\nGENERAL RULES AND CONSIDERATIONS \n1) A maximum of three teams can play in each game.\n2) There is a maximum of four players per team.\n3) Points are deducted for incorrect responses.\n4) Teams with negative scores will not be allowed to participate in Final Jeopardy. \n5) The championship game that determines the regional winner consists of Jeopardy, Double Jeopardy and Final Jeopardy rounds.\n6) Preliminary games (i.e., those used to determine the teams that will compete in the championship game) consist of Jeopardy and Final Jeopardy rounds.\n\nGAME BOARD \n1) Jeopardy and Double Jeopardy should each consist of six categories with five clues each. \n2) Final Jeopardy consists of one clue. \n3) The point totals vary from 100 to 500 points (multiples of 100) and from 200 to 1000 (multiples) ");      
             document.getElementById('playerName').innerHTML = user.toUpperCase() + " Score : ".toUpperCase();
         } 
     }
@@ -56,7 +57,12 @@ if the score is minus, add 1 to number of wrong counter
 //     numberOfClicks += 1;
 //     document.getElementById
 // }
-
+$('.col-sm-2').dblclick(function(){
+        
+          if (playerScore >= 2000 || playerScore <= 1000){
+                $('.col-sm-2').css('visibility', 'hidden');  
+            }
+})
 /*----------------------CSS---------------------------------------------*/
 // $(document).ready(function(){
 //     $(.hundred-1).dblclick(function(){
@@ -64,7 +70,7 @@ if the score is minus, add 1 to number of wrong counter
 //         var q = prompt(css.Q1);
 //           if (q === css.A1){
 //              console.log("right"); 
-//           }
+//           }  
     
 //     }
       
@@ -83,12 +89,13 @@ $(document).ready(function(){
             if(cssQ1 === null || cssQ1 === false || cssQ1 === ""){
                 cssQ1 = prompt("You forgot to enter your answer.");
             } 
-            if(cssQ1.toLowerCase() === "What is     "+css.A1) {
+            if(cssQ1.toLowerCase() === css.A1) {
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
                 document.getElementById('score').innerHTML = playerScore;  
                 $(this).css('visibility', 'hidden'); 
+                
                 // $(".hundred-1").unbind("click");
                 // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
                 // $('.hundred-1').attr('disabled','disabled');
@@ -97,7 +104,8 @@ $(document).ready(function(){
                 // $('.hundred-1').bind('click', function(){ 
                 //     return false; 
                 // });
-            }                  
+            }    
+                          
             else{
                 failNoise.play();
                 alert("Wrong!!!");
@@ -756,11 +764,18 @@ $(document).ready(function(){
             // } else {
             //     $('.col-sm-2').css('visibility', 'hidden');                 
             // }
+            // if (playerScore > 100){
+            //     $('.col-sm-2').css('visibility', 'hidden');  
+            // }
       
     }
-    keepTrackOfScore();
+
 
     /*
     When score is add , add +1 correct 
     when score is minus, add =1 wrong
     */
+  
+    $('#rules').click(function(){
+        alert("GENERAL RULES AND CONSIDERATIONS \n1) A maximum of three teams can play in each game.\n2) There is a maximum of four players per team.\n3) Points are deducted for incorrect responses.");
+    })
