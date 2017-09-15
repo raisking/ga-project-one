@@ -71,16 +71,17 @@ let c ={
 // };
 $(document).ready(function(){
     setTimeout(function(){
-        let user = prompt("Please enter your name");
         while(!user){
-        if(user === null || user === ""){
-           user = prompt("You must enter your name");
+        var user = prompt("Please enter your name");  
+            if(user === null || user === false){
+                user = prompt("You must enter your name");
+            }
+        if(user === user){
+            alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");
+            document.getElementById('playerName').innerHTML = user.toUpperCase() + " Score : ".toUpperCase();
         } 
-        else if(user === true){
-            document.getElementById('playerName').innerHTML = user + " Score:";
-        }
     }
-       PopUp();
+    //    PopUp();
     },3000); // Dialog pop up after 3 sec page load
  });
 
@@ -95,7 +96,32 @@ let failNoise = new Audio(); // wrong alert
 failNoise.src = "sound/alert-game-lost.mp3";
 let winNoise = new Audio(); //correct alert
 winNoise.src = "sound/alert-game-win.mp3";
+/*
+To do 
+- disable the div/button after every click 
+- fix userName pop up -fixed 
+- Add counter correct and wrong 
+*/
+/*
+check the score.
+if the score is added, add 1 to number of correct counter
+if the score is minus, add 1 to number of wrong counter 
+*/
+
+
 /*----------------------CSS---------------------------------------------*/
+// $(document).ready(function(){
+//     $(.hundred-1).dblclick(function(){
+//     for(var i =0 in css){
+//         var q = prompt(css.Q1);
+//           if (q === css.A1){
+//              console.log("right"); 
+//           }
+    
+//     }
+      
+//   })
+// })
 $(document).ready(function(){
     makeNoise.play();
     musicStart.play();
@@ -113,12 +139,17 @@ $(document).ready(function(){
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
-                document.getElementById('score').innerHTML = playerScore;      
-            // function play(){
-            //     var audio = document.getElementById("audio");
-            //     audio.play();
-            // }
-            }                
+                document.getElementById('score').innerHTML = playerScore;    
+                // $(".hundred-1").unbind("click");
+                // document.getElementsByClassName('.hundred-1').style.pointerEvents = 'none';
+                // $('.hundred-1').attr('disabled','disabled');
+                // $('.hundred-1').off('cick');
+                // $('.hundred-1').css('pointer-events', 'none');
+                // $('.hundred-1').bind('click', function(){ 
+                //     return false; 
+                // });
+            }   
+                        
             else{
                 failNoise.play();
                 alert("Wrong!!!");
