@@ -144,7 +144,6 @@ button{
         /* box-sizing: border-box; */
     }
   .col-md-2{
-      background-color: #fff;
       display: inline-block;
       flex-wrap: wrap;
       font-size: 1.3em;
