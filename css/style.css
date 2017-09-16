@@ -149,9 +149,8 @@ button{
       flex-wrap: wrap;
       font-size: 1.5em;
       width: 60px;
-      text-align: center;
       position: relative;
-      left: -5px;
+      left: 27px;
      
   }
   .head-col{
