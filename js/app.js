@@ -14,7 +14,7 @@ $(document).ready(function(){
         } 
     }
     //    PopUp();
-    },3500); // Dialog pop up after 3500     page load
+    },3000); // Dialog pop up after 3500     page load
  });
 
 let playerScore = document.getElementById('score'); //global variable
@@ -63,11 +63,11 @@ $(document).ready(function(){
     // $('.hundred-1').detach();
     // this.disabled = true;    
         while(!cssQ1){
-            var cssQ1 = prompt(css.Q1);
+            var cssQ1 = prompt(csss.Q1);
             if(cssQ1 === null || cssQ1 === false || cssQ1 === ""){
                 cssQ1 = prompt("You forgot to enter your answer.");
             } 
-            if(cssQ1.toLowerCase() === css.A1) {
+            if(cssQ1.toLowerCase() === csss.A1) {
                 winNoise.play();
                 alert("correct!!!"); 
                 playerScore += 100;
@@ -96,11 +96,11 @@ $(document).ready(function(){
         //();
     $('.two-hundred-1').empty();
         while(!cssQ2){
-        var cssQ2 = prompt(css.Q2);
+        var cssQ2 = prompt(csss.Q2);
         if(cssQ2 === null || cssQ2 === false || cssQ2 === ""){
             cssQ2 = prompt("You must enter your answer.");
             }
-        if(cssQ2.toLowerCase() === css.A2) {
+        if(cssQ2.toLowerCase() === csss.A2) {
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 200;
@@ -126,11 +126,11 @@ $(document).ready(function(){
         //()
     $('.three-hundred-1').empty();
         while(!cssQ3){
-        var cssQ3 = prompt(css.Q3);
+        var cssQ3 = prompt(csss.Q3);
         if(cssQ3 === null || cssQ3 === false || cssQ3 === ""){
             cssQ3 = prompt("You must enter your answer.");            
             }
-        if(cssQ3.toLowerCase() === css.A3) {
+        if(cssQ3.toLowerCase() === csss.A3) {
             winNoise.play();    
             alert("correct!!!"); 
             playerScore += 300;
@@ -158,11 +158,11 @@ $(document).ready(function(){
         //();
     $('.four-hundred-1').empty();
         while(!cssQ4){
-        var cssQ4 = prompt(css.Q4);
+        var cssQ4 = prompt(csss.Q4);
         if(cssQ4 === null || cssQ4 === false || cssQ4 === ""){
             cssQ4 = prompt("You must enter your answer.");            
         }
-        if(cssQ4.toLowerCase() === css.A4) {
+        if(cssQ4.toLowerCase() === csss.A4) {
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 400;
@@ -190,11 +190,11 @@ $(document).ready(function(){
         //();
     $('.five-hundred-1').empty();
         while(!cssQ5){
-        var cssQ5 = prompt(css.Q5);
+        var cssQ5 = prompt(csss.Q5);
         if (cssQ5 === null || cssQ5 === false || cssQ5 === ""){
             cssQ5 = prompt("You must enter your answer.");            
         }
-        if(cssQ5.toLowerCase() === css.A5) {
+        if(cssQ5.toLowerCase() === csss.A5) {
             winNoise.play();
             alert("correct!!!"); 
             playerScore += 500;

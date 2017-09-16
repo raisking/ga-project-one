@@ -16,42 +16,39 @@ h1{
     text-align: center; 
     text-shadow: 5px 5px rgb(0, 153, 204);
 }
-.col-sm-2{
+.col-md-2{
     border: 2px solid #696969;
     height: 70px;
     box-shadow: 3px 3px 5px 6px #ccc; 
     margin: 5px;
     text-shadow: 2px 2px rgb(0, 153, 204);
 }
+.head-col{
+    border: 2px solid #696969;
+    height: 100px;
+    color: #fff;
+    box-shadow: 3px 3px 5px 6px #ccc; 
+    margin: 5px;
+    margin-bottom: 20px;    
+    text-shadow: 2px 2px rgb(0, 153, 204);
+    background-color: #0d47a1;
+    font-size: 300%;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'Passion One', cursive;
+    position: relative;
+    left: 50px;
+}
+.head-col img{
+    height: 90px;
+    margin: 0 auto;
+}
+
 button{
     height: 100%;
     width: 100%;
 }
-#main{
-    /* border: 1px solid black; */
-    /* background-color: #787878; */
-    /* background-image: url(../images/bg.jpg); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; 
-    border-radius: 10px;
-    padding: 5px;
 
-}
-.topic {
-    background: linear-gradient(-90deg, rgb(0, 102, 255),rgb(230, 249, 255), rgb(0, 153, 204)); /* Standard syntax */
-    color: #fff;
-    font-size: 2em;
-    font-weight: bolder;
-    text-align: center;
-    line-height: 80px;
-    border-radius: 10px;
-    position: relative;
-    left: 70px;
-    height: 90px;
-
-}
 .hundred-1, .hundred-2,.hundred-3,
 .hundred-4,.hundred-5, .two-hundred-1,.two-hundred-2,
 .two-hundred-2,.two-hundred-3,.two-hundred-4,
@@ -62,31 +59,21 @@ button{
 .five-hundred-2,.five-hundred-3,.five-hundred-4,
 .five-hundred-5{
     background-color: rgb(51, 102, 153);
-    font-size: 3em;
+    font-size: 300%;
     text-align: center;
     line-height: 70px;
-    border-radius: 10px;
     font-family: 'Passion One', cursive;
     position: relative;
-    left: 70px;
-
+    left: 50px;
 }
-.col-sm-2:hover{
+
+.col-md-2:hover{
     background: linear-gradient(-90deg, rgb(0, 102, 255),rgb(0, 153, 204), rgb(230, 249, 255)); 
-    /* transform: skew(5deg); */
     transform: rotateX(360deg);
-    /* transform-origin: top bottom; */
     color: rgb(255,0,0);
     border: 1px solid rgb(255,0,0);
-    /* border-top-left-radius: 100% 20px;
-    border-bottom-right-radius: 100% 20px; */
-    transition-duration: 0.9s;  
 }
-img{
-    width: 80px;
-    height: 80px;
-    margin: 5px 0;
-}
+
 .final-question{
     font-size: 3em;
     text-align: center;
@@ -150,4 +137,36 @@ img{
 }
 .java{
     width: 60px;
+}
+@media only screen and (max-width: 414px) {
+    *{
+        /* margin: 0;  */
+        /* box-sizing: border-box; */
+    }
+  .col-md-2{
+      background-color: #fff;
+      display: inline-block;
+      flex-wrap: wrap;
+      font-size: 1.5em;
+      width: 70px;
+      margin: 0 auto; 
+      text-align: center;
+      padding: 0;
+  }
+ .head-col img{
+        height: 60px;
+        margin: 0 auto;
+  }
+  h1{
+      font-size: 3em;
+  }
+ #footer{
+    display: inline-block;
+    flex-wrap: wrap;
+     font-size: .7em;
+
+ }
+ .btn-success{
+     width: 50%;
+ }
 }

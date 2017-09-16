@@ -1,4 +1,4 @@
-let css = {
+let csss = {
     Q1: "Which of the following defines a relative measurement for the height of a font in em spaces? \nOption: \n1) em \n2) hm \n3) rem \n4) dm",
     A1: "em",  
     Q2: "Which of the following defines 1% of viewport width? \nOption: \n1) vh \n2) mh \n3) wh \n4) th",
@@ -31,7 +31,7 @@ let java ={
     A3: "run()",
     Q4: "What is the default value of Boolean variable? \nOption \n1) False \n2) True \n3) Null \n4) Undefined",
     A4: "false",
-    Q5: "What is the default value of byte variable? \nOption \n1) 0 \n2) 8 \n3) 16 \n 4) 32",
+    Q5: "What is the default value of byte variable? \nOption \n1) 0 \n2) 8 \n3) 16 \n4) 32",
     A5: "0"   
 }
 let php ={
