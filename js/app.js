@@ -1,6 +1,6 @@
 document.write('<script type="text/javascript" src="js/appOne.js"></script>');
 //this start soon as page is loaded
-$(document).ready(function(){
+$(document).ready(function(){   
     setTimeout(function(){
         while(!user){
         var user = prompt("Please enter your name");   

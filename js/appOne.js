@@ -31,7 +31,7 @@ let java ={
     A3: "run()",
     Q4: "What is the default value of Boolean variable? \nOption \n1) False \n2) True \n3) Null \n4) Undefined",
     A4: "false",
-    Q5: "What is the default value of byte variable? \nOption \n1) 0 \n2) 8 \n3) 16 \n4) 32",
+    Q5: "What is the default value of byte variable? \nOption \n1) 0 \n2) 8 \n3) 16 \n      4) 32",
     A5: "0"   
 }
 let php ={
