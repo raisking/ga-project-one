@@ -139,9 +139,10 @@ button{
     width: 60px;
 }
 .name {
-    color: #fff;
+    color: #fff;    
     padding-top: 10px;
 }
+
 @media only screen and (max-width: 414px) {
   .col-md-2{
       display: inline-block;
