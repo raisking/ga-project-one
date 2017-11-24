@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <h1 class="animated pulse infinite">Jeopardy</h1>
+        <h1 class="animated pulse infinite" id="jeopardyTitle">Jeopardy</h1>
     </div>
     <div class="container-fluid" id="wrapper">
         <div class="container-fluid">
@@ -40,39 +40,89 @@
         <div class="container-fluid">
 
             <div class="row" id="first-row">
-                <div class="col-md-2 hundred-1 wow fadeInRight" data-wow-duration="3s">$100</div>
-                <div class="col-md-2 hundred-2 wow fadeInLeft" data-wow-duration="3s">$100</div>
-                <div class="col-md-2 hundred-3 wow fadeInUp" data-wow-duration="3s">$100</div>
-                <div class="col-md-2 hundred-4 wow fadeInDown" data-wow-duration="3s">$100</div>
-                <div class="col-md-2 hundred-5 wow fadeInRight" data-wow-duration="3s">$100</div>
+                <div class="col-md-2 hundred-1 wow fadeInRight" data-wow-duration="3s">
+                    <p>$100</p>
+                </div>
+                <div class="col-md-2 hundred-2 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$100</p>
+                </div>
+                <div class="col-md-2 hundred-3 wow fadeInUp" data-wow-duration="3s">
+                    <p>$100</p>
+                </div>
+                <div class="col-md-2 hundred-4 wow fadeInDown" data-wow-duration="3s">
+                    <p>$100</p>
+                </div>
+                <div class="col-md-2 hundred-5 wow fadeInRight" data-wow-duration="3s">
+                    <p>$100</p>
+                </div>
             </div>
             <div class="row" id="second-row">
-                <div class="col-md-2 two-hundred-1 wow fadeInDown" data-wow-duration="3s">$200</div>
-                <div class="col-md-2 two-hundred-2 wow fadeInUp" data-wow-duration="3s">$200</div>
-                <div class="col-md-2 two-hundred-3 wow fadeInLeft" data-wow-duration="3s">$200</div>
-                <div class="col-md-2 two-hundred-4 wow fadeInRight" data-wow-duration="3s">$200</div>
-                <div class="col-md-2 two-hundred-5 wow fadeInDown" data-wow-duration="3s">$200</div>
+                <div class="col-md-2 two-hundred-1 wow fadeInDown" data-wow-duration="3s">
+                    <p>$200</p>
+                </div>
+                <div class="col-md-2 two-hundred-2 wow fadeInUp" data-wow-duration="3s">
+                    <p>$200</p>
+                </div>
+                <div class="col-md-2 two-hundred-3 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$200</p>
+                </div>
+                <div class="col-md-2 two-hundred-4 wow fadeInRight" data-wow-duration="3s">
+                    <p>$200</p>
+                </div>
+                <div class="col-md-2 two-hundred-5 wow fadeInDown" data-wow-duration="3s">
+                    <p>$200</p>
+                </div>
             </div>
             <div class="row" id="third-row">
-                <div class="col-md-2 three-hundred-1 wow fadeInUp" data-wow-duration="3s">$300</div>
-                <div class="col-md-2 three-hundred-2 wow fadeInDown" data-wow-duration="3s">$300</div>
-                <div class="col-md-2 three-hundred-3 wow fadeInRight" data-wow-duration="3s">$300</div>
-                <div class="col-md-2 three-hundred-4 wow fadeInLeft" data-wow-duration="3s">$300</div>
-                <div class="col-md-2 three-hundred-5 wow fadeInUp" data-wow-duration="3s">$300</div>
+                <div class="col-md-2 three-hundred-1 wow fadeInUp" data-wow-duration="3s">
+                    <p>$300</p>
+                </div>
+                <div class="col-md-2 three-hundred-2 wow fadeInDown" data-wow-duration="3s">
+                    <p>$300</p>
+                </div>
+                <div class="col-md-2 three-hundred-3 wow fadeInRight" data-wow-duration="3s">
+                    <p>$300</p>
+                </div>
+                <div class="col-md-2 three-hundred-4 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$300</p>
+                </div>
+                <div class="col-md-2 three-hundred-5 wow fadeInUp" data-wow-duration="3s">
+                    <p>$300</p>
+                </div>
             </div>
             <div class="row" id="forth-row">
-                <div class="col-md-2 four-hundred-1 wow fadeInDown" data-wow-duration="3s">$400</div>
-                <div class="col-md-2 four-hundred-2 wow fadeInUp" data-wow-duration="3s">$400</div>
-                <div class="col-md-2 four-hundred-3 wow fadeInLeft" data-wow-duration="3s">$400</div>
-                <div class="col-md-2 four-hundred-4 wow fadeInRight" data-wow-duration="3s">$400</div>
-                <div class="col-md-2 four-hundred-5 wow fadeInUp" data-wow-duration="3s">$400</div>
+                <div class="col-md-2 four-hundred-1 wow fadeInDown" data-wow-duration="3s">
+                    <p>$400</p>
+                </div>
+                <div class="col-md-2 four-hundred-2 wow fadeInUp" data-wow-duration="3s">
+                    <p>$400</p>
+                </div>
+                <div class="col-md-2 four-hundred-3 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$400</p>
+                </div>
+                <div class="col-md-2 four-hundred-4 wow fadeInRight" data-wow-duration="3s">
+                    <p>$400</p>
+                </div>
+                <div class="col-md-2 four-hundred-5 wow fadeInUp" data-wow-duration="3s">
+                    <p>$400</p>
+                </div>
             </div>
             <div class="row" id="fifth-row">
-                <div class="col-md-2 five-hundred-1 wow fadeInLeft" data-wow-duration="3s">$500</div>
-                <div class="col-md-2 five-hundred-2 wow fadeInRight" data-wow-duration="3s">$500</div>
-                <div class="col-md-2 five-hundred-3 wow fadeInUp" data-wow-duration="3s">$500</div>
-                <div class="col-md-2 five-hundred-4 wow fadeInDown" data-wow-duration="3s">$500</div>
-                <div class="col-md-2 five-hundred-5 wow fadeInLeft" data-wow-duration="3s">$500</div>
+                <div class="col-md-2 five-hundred-1 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$500</p>
+                </div>
+                <div class="col-md-2 five-hundred-2 wow fadeInRight" data-wow-duration="3s">
+                    <p>$500</p>
+                </div>
+                <div class="col-md-2 five-hundred-3 wow fadeInUp" data-wow-duration="3s">
+                    <p>$500</p>
+                </div>
+                <div class="col-md-2 five-hundred-4 wow fadeInDown" data-wow-duration="3s">
+                    <p>$500</p>
+                </div>
+                <div class="col-md-2 five-hundred-5 wow fadeInLeft" data-wow-duration="3s">
+                    <p>$500</p>
+                </div>
             </div>
             <div>
                 <audio id="audio" src="http://dev.interactive-creation-works.net/1/1.ogg"></audio>
@@ -100,7 +150,7 @@
             </div>
             <div class="row">
                 <div class="col-md-10 text-center">
-                    <p class="name">Developed and designed by 
+                    <p class="name">Developed and designed by
                         <a href="http://www.raiprakash.com">Prakash Rai</a>
                     </p>
                 </div>

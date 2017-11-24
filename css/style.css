@@ -143,24 +143,31 @@ button{
     padding-top: 10px;
     border: none;
 }
-
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 550px) {
+ #jeopardyTitle{
+     margin-bottom: 60px;
+ }
   .col-md-2{
       display: inline-block;
       flex-wrap: wrap;
-      font-size: 1.3em;
+      font-size: 1.2em;
       width: 50px;
-      height: 35px;
+      height: 25px;
       position: relative;
-      left: 27px;
-     
+      top: -40px;
+        
   }
+.col-md-2 p {
+    position: relative;
+    top: -25px;
+    left: -7px;
+}
   .head-col{
-        height: 65px;
+        height: 50px;
   }
  .head-col img{
-        height: 50px;
-        margin: 0    auto;
+       height: 40px; 
+      
   }
   h1{
       font-size: 3em;
@@ -172,6 +179,50 @@ button{
 
  }
  .btn-success{
-     width: 50%;
+     width: 130px;
  }
+
 }
+
+/* Landscape */
+@media only screen 
+and (min-width: 556px) 
+and (max-width: 995px) 
+ {
+    #jeopardyTitle{
+        margin-bottom: 60px;
+    }
+     .col-md-2{
+         display: inline-block;
+         flex-wrap: wrap;
+         font-size: 1.2em;
+         width: 130px;
+         height: 35px;
+         position: relative;
+         top: -40px;
+           
+     }
+   .col-md-2 p {
+       position: relative;
+       top: -20px;
+       left: -7px;
+   }
+     .head-col{
+           height: 50px;
+     }
+    .head-col img{
+          height: 40px;   
+     }
+     h1{
+         font-size: 3em;
+     }
+    #footer{
+       display: inline-block;
+       flex-wrap: wrap;
+    font-size: .7em;
+    }
+    .btn-success{
+        width: 130px;
+    }
+}
+

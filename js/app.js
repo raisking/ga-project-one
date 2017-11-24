@@ -1,21 +1,21 @@
 document.write('<script type="text/javascript" src="js/appOne.js"></script>');
 //this start soon as page is loaded
-$(document).ready(function(){   
-    setTimeout(function(){
-        while(!user){
-        var user = prompt("Please enter your name");   
-            if(user === null || user === false){
-                user = prompt("You must enter your name");   
-            }
-        if(user === user){
-            // alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");    
-            alert(user.toUpperCase() + "\n\nGENERAL RULES AND CONSIDERATIONS \n1) A maximum of three teams can play in each game.\n2) There is a maximum of four players per team.\n3) Points are deducted for incorrect responses.\n4) Teams with negative scores will not be allowed to participate in Final Jeopardy. \n5) The championship game that determines the regional winner consists of Jeopardy, Double Jeopardy and Final Jeopardy rounds.\n6) Preliminary games (i.e., those used to determine the teams that will compete in the championship game) consist of Jeopardy and Final Jeopardy rounds.\n\nGAME BOARD \n1) Jeopardy and Double Jeopardy should each consist of six categories with five clues each. \n2) Final Jeopardy consists of one clue. \n3) The point totals vary from 100 to 500 points (multiples of 100) and from 200 to 1000 (multiples) ");      
-            document.getElementById('playerName').innerHTML = user.toUpperCase() + " Score : ".toUpperCase();
-        } 
-    }
-    //    PopUp();
-    },3000); // Dialog pop up after 3500     page load
- });
+// $(document).ready(function(){   
+//     setTimeout(function(){
+//         while(!user){
+//         var user = prompt("Please enter your name");   
+//             if(user === null || user === false){
+//                 user = prompt("You must enter your name");   
+//             }
+//         if(user === user){
+//             // alert(user.toUpperCase() + "! Welcome to the Jeopardy Game");    
+//             alert(user.toUpperCase() + "\n\nGENERAL RULES AND CONSIDERATIONS \n1) A maximum of three teams can play in each game.\n2) There is a maximum of four players per team.\n3) Points are deducted for incorrect responses.\n4) Teams with negative scores will not be allowed to participate in Final Jeopardy. \n5) The championship game that determines the regional winner consists of Jeopardy, Double Jeopardy and Final Jeopardy rounds.\n6) Preliminary games (i.e., those used to determine the teams that will compete in the championship game) consist of Jeopardy and Final Jeopardy rounds.\n\nGAME BOARD \n1) Jeopardy and Double Jeopardy should each consist of six categories with five clues each. \n2) Final Jeopardy consists of one clue. \n3) The point totals vary from 100 to 500 points (multiples of 100) and from 200 to 1000 (multiples) ");      
+//             document.getElementById('playerName').innerHTML = user.toUpperCase() + " Score : ".toUpperCase();
+//         } 
+//     }
+//     //    PopUp();
+//     },3000); // Dialog pop up after 3500     page load
+//  });
 
 let playerScore = document.getElementById('score'); //global variable
 // let playerScore = $('#score'); //global variable
