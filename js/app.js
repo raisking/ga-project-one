@@ -83,9 +83,7 @@ $(document).ready(function(){
                 document.getElementById('score').innerHTML = playerScore;
                 $(this).css('visibility', 'hidden'); 
                 numWrong += 1;
-                document.getElementById('countWrong').innerHTML = numWrong;
-                
-                
+                document.getElementById('countWrong').innerHTML = numWrong;   
         }   
      }      
     });   
