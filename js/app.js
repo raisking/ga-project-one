@@ -52,7 +52,6 @@ if the score is minus, add 1 to number of wrong counter
 //                 // alert("lkafdka");
 //             }
 // })
-
 /*----------------------CSS---------------------------------------------*/
 $(document).ready(function(){
     makeNoise.play();
